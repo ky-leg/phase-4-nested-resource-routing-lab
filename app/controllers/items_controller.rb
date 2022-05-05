@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
     render json: items, include: :user
   end
 
+  #POST /items
   def create 
     item = Item.create(item_params)
     render json: item, status :created
